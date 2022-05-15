@@ -45,7 +45,7 @@ const checkValidation = () => {
     userData.firstName = firstName.trim();
     userData.lastName = lastName.trim();
     userData.email = email.trim();
-    userdataPassword = password.trim();
+    userData.password = password.trim();
     userData.isTermsAccepted = isTermAccepted;
 
     // validation on firstName
@@ -133,7 +133,7 @@ const signUp = () => {
             document.getElementById('already-exist-email').style.display = 'none';
 
             // encrypt userPassword
-            userdataPassword = encryptPassword(userdataPassword);
+            userData.password = encryptPassword(userData.password);
 
             // sending data to server
             usersData.push(userData);
@@ -157,7 +157,8 @@ const signIn = () => {
     if (usersData.length !== 0) {
         usersData.forEach((data) => {
             dataPassword = decryptPassword(data.password);
-            // console.log(dataPassword)
+            console.log(dataPassword)
+            console.log(usersData)
 
             if (data.email === signInEmail && dataPassword === signInPassword) {
                 document.getElementById('successfully-login').style.display = 'block';
@@ -169,8 +170,7 @@ const signIn = () => {
             } else if (data.email === signInEmail && dataPassword !== signInPassword) {
                 document.getElementById('signIn__invalidEmail').style.display = 'none';
                 document.getElementById('signIn__invalidPassword').style.display = 'block';
-                return;
-            } else if (data.email !== signInEmail && dataPassword !== signInPassword) {
+            } else {
                 document.getElementById('signIn__invalidEmail').style.display = 'block';
                 document.getElementById('signIn__invalidPassword').style.display = 'block';
             }
