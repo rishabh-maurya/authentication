@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#successfully-login, #successfully-signup {
+    display: none;
+}
+
+.text__info {
+    color: #0c919d;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home__animation {
+    width: 600px;
+    height: 600px;
+}
+
+.text__info h3 {
+    font-size: 2.5rem;
+    line-height: 3ch;
+}
+
+.brand__name {
+    display: block;
+    font-size: 6rem;
+    color: rgb(254, 90, 30);
+}
+
+.tagline {
+    color: rgb(254, 90, 30);
+    padding: 5px 0;
+    width: 500px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2.2ch;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-background {
+    background: #0c919d !important;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff !important;
+}
+
+
+/* about page */
+
+#about .about__animation {
+    position: relative;
+    top: -50px;
+    padding: 0 !important;
+}
+
+
+
+
+.btn-bg {
+    background-color: rgb(254, 90, 30) !important;
+    border: 2px solid rgb(254, 90, 30) !important;
+    color: #fff !important;
+    transition: all 0.3s ease-in;
+}
+
+.btn-bg:hover {
+    box-shadow: 0 5px 10px black;
+}
+
+.page__size {
+    height: 100vh;
+    width: 100%;
+}
